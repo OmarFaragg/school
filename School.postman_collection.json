@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "6eb79f4a-8001-43ab-87f4-e60bed10bc8d",
+		"name": "School_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18166859"
+	},
+	"item": [
+		{
+			"name": "Register Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "omarrrfaraggg",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "check123",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "check123",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "omar",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "farag",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "M",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "omarr@omar.com",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "STUDENT",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1999-05-05",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "omarrrfaraggg",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "check123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api-token-auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api-token-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student Profile Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 5334441f31f475267b4958843c067127b3c7b279",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Profile Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 5334441f31f475267b4958843c067127b3c7b279",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "ahmed",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "hassan",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "TEACHER",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "omarali",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "check123",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "check123",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "omar",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "ali",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "M",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "omarrr@omar.com",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "TEACHER",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1980-05-05",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "omarali",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "check123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api-token-auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api-token-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher Profile Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 30d30cc804239df8a11184b1ff25ccc8e01c2adc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Teacher Profile Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 30d30cc804239df8a11184b1ff25ccc8e01c2adc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "mohamed",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "gaber",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "STUDENT",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Enrolled Courses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 5334441f31f475267b4958843c067127b3c7b279",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/courses-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher Course",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 30d30cc804239df8a11184b1ff25ccc8e01c2adc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/courses-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher Students ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 30d30cc804239df8a11184b1ff25ccc8e01c2adc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Enroll in Course 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token c71a82779a79f2ac2f55f36d966685794524ccc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "course_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/enroll",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
